@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Profit Prediction</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav-header"></div>
+        <div class="nav-right">
+            <div>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, We are team <span class="Purple">Maoris</span>
+                <!-- <div>and I'm a passionate</div> -->
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="images/pic1.png" alt="Picture">
+            </div>
+        </section>
+
+        <div class="cen">
+            In the competitive world of marketing, companies are constantly striving to optimize their strategies and
+            maximize their profitability. One way to achieve this is to use machine learning (ML) to predict profit
+            based on various factors such as research and development (R&D) spend, administration costs, and marketing
+            expenses. By understanding the relationship between these factors and profit, companies can make informed
+            decisions about how to allocate resources and improve their bottom line.
+
+            <br><br>
+
+            Objective :
+
+             The objective of this project is to build an ML model that can accurately predict the profit of a marketing
+            company based on R&D spend, administration costs, and marketing expenses. The model will be developed using
+            Python and the Flask framework will be used to deploy the model as a web application.
+        </div>
+
+        <!-- <hr> -->
+
+        <!-- <section class="secondsection">
+            <span class="text-gray">What i have studies so far.</span>
+            <h1>Education</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-school" src="images/pngwing.com.png" alt="School Image">
+                </div>
+                <div class="vertical">
+                    <img src="images/college-building-clipart-xl.png" alt="Collage Image" class="image-jrclg">
+                </div>
+                <div class="vertical">
+                    <img src="images/college.png" alt="Collage" class="image-clg">
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+
+    <div class="container">
+        <center id="edit">
+            Predict your model here
+        </center>
+        <center>
+            <form action="/pred" method="POST">
+                <br>
+                <br>
+                <label>Choose your State:</label>
+                <!-- <br> -->
+                <!-- <br> -->
+                <select name="State">
+                    <option value="3">Select State</option>
+                    <option value="2">New York</option>
+                    <option value="0">California</option>
+                    <option value="1">Florida</option>
+                </select>
+                <br>
+                <br>
+                Enter your R&D Spend : <input type="text" name="R&D Spend "></input>
+                <br>
+                <br>
+                Enter your Administration : <input type="text" name="Administration"></input>
+                <br>
+                <br>
+                Enter your Marketing Spend : <input type="text" name="Marketing Spend"></input>
+                <br>
+                <br>
+
+                <input type="submit"></input>
+                <br><br>
+            </form>
+        </center>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        <!-- var typed = new Typed('#element', {
+            strings: ['Web Devoloper', 'Website Designer', 'and a CSE Student'],
+            typeSpeed: 150,
+        }); -->
+    </script>
+
+</body>
+
+</html>
