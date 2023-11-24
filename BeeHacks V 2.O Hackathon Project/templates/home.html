@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  </head>
+
+  <style>
+  body {
+    background-image: url('../static/images/navyblue.avif');
+    background-color: Purple;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(0, 3, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(119, 119, 158);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    margin: 0 23px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(140, 140, 240);
+    font-size: 1.02rem;
+  }
+  
+  .left {
+    font-size: 1.5rem;
+  }
+  
+  .firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+    align-items: center;
+  }
+  
+  .firstsection>div {
+    width: 30%
+  }
+  
+  .leftsection {
+    font-size: 2.5rem;
+  
+  }
+  
+  .rightsection img {
+    width: 129%;
+    margin-top: 60px;
+    margin-right: 100px;
+  }
+  
+  .Purple {
+    color: rgb(190, 120, 255);
+  }
+  
+  #element {
+    color: rgb(190, 120, 255);
+  }
+  
+  .secondsection {
+    max-width: 80vmax;
+    margin: auto;
+    height: 80vh;
+  }
+  
+  main hr {
+    border: 0;
+    background: rgb(195, 102, 229);
+    height: 1.2px;
+    margin: 35px 100px;
+  }
+  
+  .secondsection h1 {
+    font-size: 2rem;
+  }
+  
+  .text-gray {
+    font-color: rgb(201, 122, 122);
+    font-size: 0.8rem;
+  }
+  
+  .secondsection .box {
+    background-color: white;
+    width: 40vw;
+    height: 2px;
+    margin: 56px 300px;
+    display: flex;
+  }
+  
+  .secondsection .vertical {
+    background-color: white;
+    height: 80px;
+    width: 2px;
+    margin: 0 102px;
+  
+  }
+  
+  .image-school {
+    position: relative;
+    width: 28px;
+    top: -34px;
+    left: -12px;
+  }
+  
+  .image-jrclg {  
+    position: relative;
+    width: 32px;
+    top: -30px;
+    left: -15px;
+  }
+  
+  .image-clg {
+    position: relative;
+    width: 27px;
+    top: -32px;
+    left: -14px;
+  }
+  
+  .cen{
+    margin: 100px;
+  }
+  
+  #edit{
+    font-size: 3rem;
+    border: 2px solid rgb(119, 119, 158);
+    border-radius: 10px;
+    background-color: rgb(119, 119, 158);
+  }
+  
+  .submit{
+    font-size: 18px;
+  }
+  
+  .change{
+    font-size: 20px;
+  }
+  </style>
+  
+  <body>
+  <form action="/pred" method="POST">
+    <nav>
+      <div class="left">Profit Prediction</div>
+      <div class="right">
+          <ul>
+              <li><a href="templates/home.html">Home</a></li>
+              <li><a href="templates/about.html">About</a></li>
+              <li><a href="templates/contact.html">Contact Us</a></li>
+          </ul>
+      </div>
+    </nav>
+    <main>
+      <section class="firstsection">
+          <div class="leftsection">
+              Hi, We are team <span class="Purple">Maoris</span>
+              <!-- <div>and I'm a passionate</div> -->
+              <span id="element"></span>
+          </div>
+          <div class="rightsection">
+              <img src="static/images/pic.jpg" alt="Picture">
+          </div>
+      </section>
+  
+      <div class="cen">
+          In the competitive world of marketing, companies are constantly striving to optimize their strategies and
+          maximize their profitability. One way to achieve this is to use machine learning (ML) to predict profit
+          based on various factors such as research and development (R&D) spend, administration costs, and marketing
+          expenses. By understanding the relationship between these factors and profit, companies can make informed
+          decisions about how to allocate resources and improve their bottom line.
+  
+          <br><br>
+  
+          Objective :
+  
+          The objective of this project is to build an ML model that can accurately predict the profit of a marketing
+          company based on R&D spend, administration costs, and marketing expenses. The model will be developed using
+          Python and the Flask framework will be used to deploy the model as a web application.
+      </div>
+  </main>
+  
+  <div class="container">
+    <center id="edit">
+        Predict your model here
+    </center>
+  </div>
+  <center>
+  
+  
+    <br>
+    <br>
+    <label >Choose your State:</label>
+    <select name="State">
+      <option value="2">New York</option>
+      <option value="0">California</option>
+      <option value="1">Florida</option>
+    
+    </select>
+    <br>
+    <br>
+    Enter your R&D Spend :
+    
+    <input type="text" name="R&D Spend"></input>
+    <br>
+    <br>
+    Enter your Administration :
+    
+    <input type="text" name="Administration"></input>
+    <br>
+    <br>
+    Enter your Marketing Spend :
+    
+    <input type="text" name="Marketing Spend"></input>
+    
+    <br>
+    <br>
+    <input type="submit"></input>
+    <br>
+    <br>
+    {{result}}
+  </center>
+  </form>
+</body>
+</html>  
+
+
